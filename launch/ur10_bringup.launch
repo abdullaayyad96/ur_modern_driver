@@ -27,10 +27,15 @@
   <arg name="base_frame" default="$(arg prefix)base" />
   <arg name="tool_frame" default="$(arg prefix)tool0_controller" />
   <arg name="shutdown_on_disconnect" default="true" />
+  <arg name="publish_robot_state" default="true" />
+  <arg name="load_urdf" default="true" />
+
   <!-- robot model -->
-  <include file="$(find ur_description)/launch/ur10_upload.launch">
-    <arg name="limited" value="$(arg limited)"/>
-  </include>
+  <group if="$(arg load_urdf)">
+   <include file="$(find ur_description)/launch/ur10_upload.launch">
+     <arg name="limited" value="$(arg limited)"/>
+   </include>
+  </group>
 
   <!-- ur common -->
   <include file="$(find ur_modern_driver)/launch/ur_common.launch">
@@ -51,6 +56,7 @@
     <arg name="base_frame" value="$(arg base_frame)" />
     <arg name="tool_frame" value="$(arg tool_frame)" />
     <arg name="shutdown_on_disconnect" value="$(arg shutdown_on_disconnect)"/>
+    <arg name="publish_robot_state" value="$(arg publish_robot_state)" />
   </include>
 
 </launch>

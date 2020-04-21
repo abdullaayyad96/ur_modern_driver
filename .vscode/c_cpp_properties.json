@@ -1,0 +1,22 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/abdulla/codes/neobotix_robot_ws/devel/include/**",
+        "/opt/ros/melodic/include/**",
+        "/home/abdulla/codes/neobotix_robot_ws/src/neo_driver/cob_scan_unifier/include/**",
+        "/home/abdulla/codes/neobotix_robot_ws/src/ddynamic_reconfigure/include/**",
+        "/home/abdulla/codes/neobotix_robot_ws/src/drilling/include/**",
+        "/home/abdulla/codes/neobotix_robot_ws/src/realsense-ros/realsense2_camera/include/**",
+        "/home/abdulla/codes/neobotix_robot_ws/src/ur10_comms/include/**",
+        "/home/abdulla/codes/neobotix_robot_ws/src/ur_modern_driver/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ]
+}
