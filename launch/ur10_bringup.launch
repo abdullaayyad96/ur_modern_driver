@@ -29,11 +29,14 @@
   <arg name="shutdown_on_disconnect" default="true" />
   <arg name="publish_robot_state" default="true" />
   <arg name="load_urdf" default="true" />
+  <arg name="kinematics_config" default="$(find ur_description)/config/ur10_default.yaml" doc="Kinematics config file used for calibration correction. This will be used to verify the robot's calibration is matching the robot_description."/>
+  
 
   <!-- robot model -->
   <group if="$(arg load_urdf)">
    <include file="$(find ur_description)/launch/ur10_upload.launch">
      <arg name="limited" value="$(arg limited)"/>
+      <arg name="kinematics_config" value="$(arg kinematics_config)"/>
    </include>
   </group>
 
